@@ -1,0 +1,27 @@
+html, body{
+    height: 100%;
+}
+
+.sidebar {
+    background-color: #FFF;
+}
+
+.array {
+    background-color: #F4F5FA;
+}
+
+.round-corner {
+    border-radius: 20px 0px 0px 0px;
+}
+
+.range {
+    width: 100%;
+}
+
+.yellow {
+    background-color: #F7C15C;
+}
+
+.purple {
+    background-color: #7020FF;
+}
