@@ -63,7 +63,7 @@ genArrayBtn.addEventListener('click', () => {
 
     array.forEach(function(value, index){
         const currBar = document.getElementById(index);
-        currBar.style.height = value + "px";
+        currBar.style.height = value * 2 + "px";
         currBar.textContent = value;
     });
 });
