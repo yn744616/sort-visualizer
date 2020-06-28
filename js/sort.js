@@ -12,7 +12,8 @@
  */
 const delay = ms => new Promise(res => setTimeout(res, ms));
 const bar = document.querySelector('.bar');
-const maxNumArray = 22;
+const barContainerWidth = bar.getBoundingClientRect().width;
+let maxNumArray = 22;
 const genArrayBtn = document.querySelector('.arr-btn');
 const mergeSortBtn = document.querySelector('.merge-sort-btn');
 const slider = document.querySelector('.range');
@@ -20,6 +21,17 @@ const compareColor = "#F7C15C";
 const setColor = "#7020FF";
 const originalColor = "#0075FF";
 var speed = 250;
+ 
+/**
+ * Changes the number of bars depending on the screen size
+ */
+if(barContainerWidth > 500 && barContainerWidth < 870) {
+    maxNumArray = 15;
+}else if(barContainerWidth <= 500 && barContainerWidth > 400){
+    maxNumArray = 10;
+}else if(barContainerWidth <= 400){
+    maxNumArray = 5;
+}
 
 
 /**
@@ -97,7 +109,7 @@ slider.addEventListener('mousemove', e => {
     speed = slider.value * 50;
     document.getElementById('sliderValue').innerHTML = slider.value;
 
-})
+});
 
 
 
